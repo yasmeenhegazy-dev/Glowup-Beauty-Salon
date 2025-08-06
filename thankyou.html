@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You! - GlowUp Beauty Salon</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo"><img src="assests/icons/Glow.jpg" alt="GlowUp Icon" class="navbar-icon">GlowUp</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="stylists.html">Stylists</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="booking.html">Book Now</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button id="darkModeToggle" aria-label="Toggle dark mode" class="dark-mode-toggle">🌙</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="thankyou" class="thankyou-section">
+            <h1>Thank You!</h1>
+            <p>Your appointment has been successfully booked. We look forward to seeing you!</p>
+            <div class="booking-details-summary">
+                <h2>Booking Details:</h2>
+                <p><strong>Name:</strong> <span id="summary-name"></span></p>
+                <p><strong>Phone:</strong> <span id="summary-phone"></span></p>
+                <p><strong>Service:</strong> <span id="summary-service"></span></p>
+                <p><strong>Stylist:</strong> <span id="summary-stylist"></span></p>
+                <p><strong>Date:</strong> <span id="summary-date"></span></p>
+                <p><strong>Time:</strong> <span id="summary-time"></span></p>
+            </div>
+            <p class="return-home">
+                <a href="index.html" class="btn">Return to Homepage</a>
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 GlowUp Beauty Salon.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const bookingData = JSON.parse(localStorage.getItem('latestBooking'));
+            if (bookingData) {
+                document.getElementById('summary-name').textContent = bookingData.name;
+                document.getElementById('summary-phone').textContent = bookingData.phone;
+                document.getElementById('summary-service').textContent = bookingData.service;
+                document.getElementById('summary-stylist').textContent = bookingData.stylist;
+                document.getElementById('summary-date').textContent = bookingData.date;
+                document.getElementById('summary-time').textContent = bookingData.time;
+            } else {
+                document.querySelector('.booking-details-summary').innerHTML = '<p>No booking details found.</p>';
+            }
+        });
+    </script>
+</body>
+</html>

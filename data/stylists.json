@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "name": "Sarah",
+        "specialty": "Hair Stylist",
+        "bio": "Sarah is an expert in modern hair trends and classic styles, with over 10 years of experience.",
+        "image": "assests/images/stylist1.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Emily",
+        "specialty": "Nail Technician",
+        "bio": "Emily specializes in intricate nail art and long-lasting manicures and pedicures.",
+        "image": "assests/images/stylist2.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Jessica",
+        "specialty": "Esthetician",
+        "bio": "Jessica provides exceptional skincare treatments, facials, and waxing services.",
+        "image": "assests/images/stylist3.jpg"
+    }
+]
