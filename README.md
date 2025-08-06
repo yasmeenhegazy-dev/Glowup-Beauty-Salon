@@ -6,4 +6,4 @@
 -Booking form.
 -Dark mode toggle.
 -Data saved in localStorage.
-###You can try this website via link : 
+###You can try this website via link : https://beauty-salon-wy5s.vercel.app/
